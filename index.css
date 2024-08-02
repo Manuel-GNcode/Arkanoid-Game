@@ -1,11 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Playwrite+ES+Deco:wght@100..400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
-    background: #000;
+    background: #252525;
+    background-image: url('src/dark-space.webp');
+    background-position: center;
+    background-size: cover;
+    min-height: fit-content;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #canvas {
-    background-color: #000;
+    background: #010101;
+    background: linear-gradient(0deg, #010101, #1C1C1C);
+    background-image: url('src/background.webp');
+    background-position: right;
+    background-size: 115%;
     display: block;
-    margin: 50px auto 0;
-    border: 4px solid #fff;
-    border-bottom: 4px solid transparent;
+    border: 8px ridge #000;
+    border-right: 8px groove #000;
+    border-bottom: 8px inset #000;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 15px #ffffff44;
+    filter:grayscale(.8);
+}
+button {
+    padding: 5px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    min-width: fit-content;
+    width: 300px;
+    cursor: pointer;
+    background-color: #ccc;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+button:hover {
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+#lost, #win {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    display: none;
+}
+
+#gncode {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-style: italic;
+}
+#gncode b {
+    color: #aaa;
+}
+#gncode:hover {
+    color: #ff0000;
 }
